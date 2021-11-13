@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body{
+    background-image: url(image/background-crew-desktop.jpg);
+    background-image: url(image/background-crew-mobile.jpg);
+    background-image: url(image/background-crew-tablet.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+    height: 100vh;
+}
+
+nav{
+    background-color: rgba(3, 105, 105, 0.534);
+    color: white;
+    width: 100%;
+    text-align: right;
+    padding: 20px;
+    height: 70px;
+}
+
+li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+li:hover{
+    color:rgb(0, 0, 0)
+}
+
+.menu{
+    display: inline-block;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px 0;
+    
+}
+
+.column-1{
+    margin-left: 50px;
+    padding: 30px;
+    position: relative;
+}
+
+.column-1::before{
+    content: "";
+    width: 3%;
+    height: 80%;
+    background: linear-gradient(to right, rgb(194, 192, 192), rgb(139, 145, 231));
+    position: absolute;
+    left: -20px;
+}
+
+
+#start{
+    font-size: 30px;
+    font-weight: 100;
+}
+
+#start1{
+    font-size: 30px;
+    color: snow;
+    font-weight: 100;
+    margin: 20px 0;
+}
+
+h1{
+    font-size: 54px;
+    color: rgb(104, 175, 255);
+    font-weight: 100;
+    margin: 20px 0;
+}
+.column-2{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.magnifier{
+    width: 350px;
+    z-index: 2;
+}
+ 
+.colorboxmagnifier{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: linear-gradient(to right, rgb(194, 192, 192), rgb(139, 145, 231));
+    height: 100%;
+    width: 80%;
+    border-radius: 20px 0 0 20px;
+    z-index 1;
+    transform: translateX();
+}
+
+.menu-icon{
+       position: absolute;
+       right:0;
+       top: 35px;
+       width: 4em;
+       margin-top: -2.6em;
+       display: none;
+}
+
+@media(max-width: 700px){
+    
+    .menu{
+        position: relative;
+        top:50px;
+        left: 20px;
+        overflow: hidden;
+    }
+    
+   .menu-icon{
+       display: block;
+    }
+
+    .nav-li{
+        display:block;
+        margin-top: 4px;
+    }
+}
