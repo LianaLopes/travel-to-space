@@ -5,6 +5,8 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+
+
 body{
     background-image: url(image/background-crew-desktop.jpg);
     background-image: url(image/background-crew-mobile.jpg);
@@ -18,30 +20,71 @@ body{
     color: white;
     overflow: hidden;
     height: 100vh;
+    margin: 0;
 }
 
 nav{
-    background-color: rgba(3, 105, 105, 0.534);
-    color: white;
+    background-color: rgba(182, 185, 236, 0.5);
+    padding: 0 20px;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
-    text-align: right;
-    padding: 20px;
-    height: 70px;
+    display: flex;
 }
 
-li{
+nav ul li {
     list-style: none;
+    padding: 0 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    float: right;
+    clear: right;
+    
+}
+
+nav ul li a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+nav ul.menu {
+    /*position: absolute;
+    top: 75px;
+    left: 0;
+    right: -10px;
+    padding: 0 20px;
+    text-align: right;
+    margin-top: -60px;
+    justify-content: space-between;*/
+    display: flex;
+    flex-direction: row;
+}
+
+nav ul.menu li{
+    margin-bottom: 15px;
+    padding: 0 20px;
+}
+li{
+    /*list-style: none;
     display: inline-block;
     margin-right: 20px;
-    cursor: pointer;
+    cursor: pointer;*/
+    padding: 0 20px;
 }
 
-li:hover{
-    color:rgb(0, 0, 0)
-}
 
 .menu{
     display: inline-block;
+    padding: 0 20px;
 }
 
 .row{
@@ -49,7 +92,25 @@ li:hover{
     justify-content: space-between;
     align-items: center;
     margin: 100px 0;
-    
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    color: rgb(139, 145, 231);
+    font-size: 36px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: none;
+    border-radius: 5px;
+    ;
+}
+
+button:hover {
+        text-decoration: none;
+        cursor: pointer;
+        opacity: 0.8;
 }
 
 .column-1{
@@ -105,34 +166,89 @@ h1{
     height: 100%;
     width: 80%;
     border-radius: 20px 0 0 20px;
-    z-index 1;
+    z-index: 1;
     transform: translateX();
 }
 
-.menu-icon{
-       position: absolute;
-       right:0;
-       top: 35px;
-       width: 4em;
-       margin-top: -2.6em;
-       display: none;
+nav-link {
+    padding: 0 20px;
+  }
+
+  .nav-link:hover {
+      cursor: pointer;
+      opacity:0.8;
+      background-color:lightslategrey ;
+  }
+
+  button:focus~ul {
+    height: 260px;
+}
+/*.menu-icon{
+    right: 0px;
+    display: flex;
+    height: 60px;
+    width: 80px;
+    flex-direction: column;
+    cursor: pointer;
+    justify-content: space-between;
+    float: right;
+    clear: right;
+    margin-top: -50px;
+    margin: -3.5em 0 0 0;
+    padding: 0 0 0 0;
+    position: fixed right;
 }
 
+.menu-icon:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+Media Querie*/
 @media(max-width: 700px){
     
     .menu{
-        position: relative;
-        top:50px;
-        left: 20px;
-        overflow: hidden;
+        position:relative;
+        top:60px;
+        left: 60px;
+        position: fixed right;
+    }
+
+    nav {
+        padding: 0;
+        align-items: flex-start;
+    }
+
+    nav,
+    ul {
+        flex-direction: column;
     }
     
-   .menu-icon{
-       display: block;
+    ul {
+        text-align: center;
+        margin: 0;
+        height: 0;
     }
+
+   /*.menu-icon{
+       display: block;
+    }*/
 
     .nav-li{
         display:block;
-        margin-top: 4px;
+        margin-top: 55px;
+    }
+
+    nav ul.menu {
+        display: block;
+        list-style-type: disc;
+    }
+
+    button {
+        display: flex;
+    }
+
+    li,
+    ul {
+        width: 100%;
     }
 }
